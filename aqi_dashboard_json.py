@@ -17,6 +17,7 @@ cities = sorted(df["City"].dropna().astype(str).unique())
 # CREATE DASH APP
 # ---------------------------------------
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
 
@@ -116,3 +117,4 @@ def update_dashboard(city, selected_idx):
 # ---------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
